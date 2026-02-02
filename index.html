@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beni Seviyor Musun? 💖</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+
+            background-image: url("arka_plan.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Yazı okunurluğu için karartma */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.45);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .buttons {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            margin: auto;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        #yes {
+            left: 30px;
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        #no {
+            right: 30px;
+            background-color: #db7093;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <h1>Beni seviyor musun? 💘</h1>
+
+    <div class="buttons">
+        <button id="yes">Evet 💕</button>
+        <button id="no">Hayır 💔</button>
+    </div>
+</div>
+
+<script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+
+    noBtn.addEventListener("mouseenter", () => {
+        const maxX = 200;
+        const maxY = 100;
+
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
+
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    });
+
+    yesBtn.addEventListener("click", () => {
+        alert("Ben de seni seviyorum! ❤️🥰");
+    });
+</script>
+
+</body>
+</html>
